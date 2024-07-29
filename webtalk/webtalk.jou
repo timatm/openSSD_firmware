@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# 
+# Start of session at: Tue Apr 23 14:58:41 2024
+# Process ID: 8696
+# Current directory: Z:/vm/test0423/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: Z:/vm/test0423/webtalk/webtalk.log
+# Journal file: Z:/vm/test0423/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

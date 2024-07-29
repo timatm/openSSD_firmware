@@ -1,0 +1,586 @@
+09:23:52 **** Incremental Build of configuration Debug for project openSSD_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/nmc/nmc_requests.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/nmc/nmc_requests.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nmc/nmc_requests.d" -MT"src/nmc/nmc_requests.o" -o "src/nmc/nmc_requests.o" "../src/nmc/nmc_requests.c"
+../src/nmc/nmc_requests.c: In function 'nmcRegisterNewMappingReqDone':
+../src/nmc/nmc_requests.c:56:22: warning: variable 'reqEntry' set but not used [-Wunused-but-set-variable]
+     P_SSD_REQ_FORMAT reqEntry;
+                      ^~~~~~~~
+../src/nmc/nmc_requests.c: In function 'nmcRegisterInferenceReq':
+../src/nmc/nmc_requests.c:92:22: warning: variable 'reqInference' set but not used [-Wunused-but-set-variable]
+     P_SSD_REQ_FORMAT reqInference;
+                      ^~~~~~~~~~~~
+../src/nmc/nmc_requests.c: In function 'nmcInferenceMain':
+../src/nmc/nmc_requests.c:199:38: warning: assignment to 'NMC_MAPPING_LOC *' {aka 'struct _NMC_MAPPING_LOC *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+             ch_mapping_table_address = MAPPING_TABLE_BASE_ADDRESS + 0x10 * i;
+                                      ^
+'Finished building: ../src/nmc/nmc_requests.c'
+' '
+'Building target: openSSD_firmware.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../openSSD_firmware_bsp/ps7_cortexa9_0/lib -o "openSSD_firmware.elf"  ./src/nvme/host_lld.o ./src/nvme/nvme_admin_cmd.o ./src/nvme/nvme_identify.o ./src/nvme/nvme_io_cmd.o ./src/nvme/nvme_main.o  ./src/nmc/address_translation_nmc.o ./src/nmc/nmc_file_table.o ./src/nmc/nmc_mapping.o ./src/nmc/nmc_requests.o  ./src/monitor/monitor.o ./src/monitor/monitor_buffer.o ./src/monitor/monitor_cmds.o ./src/monitor/monitor_flash.o ./src/monitor/monitor_map.o  ./src/input/input.o  ./src/cdma/cdma.o  ./src/address_translation.o ./src/data_buffer.o ./src/ftl_config.o ./src/garbage_collection.o ./src/main.o ./src/nsc_driver.o ./src/request_allocation.o ./src/request_schedule.o ./src/request_transform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: openSSD_firmware.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size openSSD_firmware.elf  |tee "openSSD_firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 209780	   7248	  25712	 242740	  3b434	openSSD_firmware.elf
+'Finished building: openSSD_firmware.elf.size'
+' '
+09:24:15 **** Incremental Build of configuration Debug for project openSSD_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:55:54 **** Incremental Build of configuration Debug for project openSSD_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/nvme/nvme_admin_cmd.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/nvme/nvme_admin_cmd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nvme/nvme_admin_cmd.d" -MT"src/nvme/nvme_admin_cmd.o" -o "src/nvme/nvme_admin_cmd.o" "../src/nvme/nvme_admin_cmd.c"
+../src/nvme/nvme_admin_cmd.c: In function 'handle_monitor_nmc':
+../src/nvme/nvme_admin_cmd.c:79:25: warning: variable 'loc' set but not used [-Wunused-but-set-variable]
+         NMC_MAPPING_LOC loc;
+                         ^~~
+'Finished building: ../src/nvme/nvme_admin_cmd.c'
+' '
+'Building file: ../src/nvme/nvme_io_cmd.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/nvme/nvme_io_cmd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nvme/nvme_io_cmd.d" -MT"src/nvme/nvme_io_cmd.o" -o "src/nvme/nvme_io_cmd.o" "../src/nvme/nvme_io_cmd.c"
+'Finished building: ../src/nvme/nvme_io_cmd.c'
+' '
+'Building file: ../src/nvme/nvme_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/nvme/nvme_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nvme/nvme_main.d" -MT"src/nvme/nvme_main.o" -o "src/nvme/nvme_main.o" "../src/nvme/nvme_main.c"
+In file included from ../src/nvme/nvme_main.c:72:
+../../openSSD_firmware_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/nvme/nvme_main.c:78:18: warning: initialization of 'int *' from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+ int *timer_reg = 0xF8F00200;
+                  ^~~~~~~~~~
+../src/nvme/nvme_main.c:79:22: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+ int *count_address = 0x2FFFE010;
+                      ^~~~~~~~~~
+'Finished building: ../src/nvme/nvme_main.c'
+' '
+'Building file: ../src/nmc/address_translation_nmc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/nmc/address_translation_nmc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nmc/address_translation_nmc.d" -MT"src/nmc/address_translation_nmc.o" -o "src/nmc/address_translation_nmc.o" "../src/nmc/address_translation_nmc.c"
+'Finished building: ../src/nmc/address_translation_nmc.c'
+' '
+'Building file: ../src/nmc/nmc_file_table.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/nmc/nmc_file_table.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nmc/nmc_file_table.d" -MT"src/nmc/nmc_file_table.o" -o "src/nmc/nmc_file_table.o" "../src/nmc/nmc_file_table.c"
+In file included from ../src/nmc/nmc_file_table.c:1:
+../src/nmc/nmc_file_table.c: In function 'nmcInitFileTable':
+Z:\vm\test0423\openSSD_firmware\src/debug.h:107:29: warning: statement with no effect [-Wunused-value]
+ #define STATIC_ASSERT(cond) ((int)(sizeof(struct { int : (-!(cond)); })))
+                             ^
+../src/nmc/nmc_file_table.c:34:5: note: in expansion of macro 'STATIC_ASSERT'
+     STATIC_ASSERT(sizeof(NMC_FILE_TABLE) == NMC_FILE_TABLE_BYTES);
+     ^~~~~~~~~~~~~
+Z:\vm\test0423\openSSD_firmware\src/debug.h:107:29: warning: statement with no effect [-Wunused-value]
+ #define STATIC_ASSERT(cond) ((int)(sizeof(struct { int : (-!(cond)); })))
+                             ^
+../src/nmc/nmc_file_table.c:35:5: note: in expansion of macro 'STATIC_ASSERT'
+     STATIC_ASSERT(NMC_FILE_TABLE_ADDR <= RESERVED1_END_ADDR);
+     ^~~~~~~~~~~~~
+'Finished building: ../src/nmc/nmc_file_table.c'
+' '
+'Building file: ../src/nmc/nmc_mapping.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/nmc/nmc_mapping.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nmc/nmc_mapping.d" -MT"src/nmc/nmc_mapping.o" -o "src/nmc/nmc_mapping.o" "../src/nmc/nmc_mapping.c"
+In file included from ../src/nmc/nmc_mapping.c:1:
+../src/nmc/nmc_mapping.c: In function 'nmcInitMapping':
+Z:\vm\test0423\openSSD_firmware\src/debug.h:107:29: warning: statement with no effect [-Wunused-value]
+ #define STATIC_ASSERT(cond) ((int)(sizeof(struct { int : (-!(cond)); })))
+                             ^
+../src/nmc/nmc_mapping.c:78:5: note: in expansion of macro 'STATIC_ASSERT'
+     STATIC_ASSERT(offsetof(NMC_CH_MAPPING_TABLE, pre_info) == NMC_CH_MAPPING_PREFIX_INFO_OFFSET);
+     ^~~~~~~~~~~~~
+Z:\vm\test0423\openSSD_firmware\src/debug.h:107:29: warning: statement with no effect [-Wunused-value]
+ #define STATIC_ASSERT(cond) ((int)(sizeof(struct { int : (-!(cond)); })))
+                             ^
+../src/nmc/nmc_mapping.c:79:5: note: in expansion of macro 'STATIC_ASSERT'
+     STATIC_ASSERT(offsetof(NMC_CH_MAPPING_TABLE, pba) == NMC_CH_MAPPING_TABLE_OFFSET);
+     ^~~~~~~~~~~~~
+Z:\vm\test0423\openSSD_firmware\src/debug.h:107:29: warning: statement with no effect [-Wunused-value]
+ #define STATIC_ASSERT(cond) ((int)(sizeof(struct { int : (-!(cond)); })))
+                             ^
+../src/nmc/nmc_mapping.c:80:5: note: in expansion of macro 'STATIC_ASSERT'
+     STATIC_ASSERT(offsetof(NMC_CH_MAPPING_TABLE, post_info) == NMC_CH_MAPPING_POSTFIX_INFO_OFFSET);
+     ^~~~~~~~~~~~~
+Z:\vm\test0423\openSSD_firmware\src/debug.h:107:29: warning: statement with no effect [-Wunused-value]
+ #define STATIC_ASSERT(cond) ((int)(sizeof(struct { int : (-!(cond)); })))
+                             ^
+../src/nmc/nmc_mapping.c:81:5: note: in expansion of macro 'STATIC_ASSERT'
+     STATIC_ASSERT(sizeof(NMC_CH_MAPPING_TABLE) == BYTES_PER_SLICE);
+     ^~~~~~~~~~~~~
+Z:\vm\test0423\openSSD_firmware\src/debug.h:107:29: warning: statement with no effect [-Wunused-value]
+ #define STATIC_ASSERT(cond) ((int)(sizeof(struct { int : (-!(cond)); })))
+                             ^
+../src/nmc/nmc_mapping.c:83:5: note: in expansion of macro 'STATIC_ASSERT'
+     STATIC_ASSERT(NMC_DATA_BUFFER_END_ADDR < RESERVED1_END_ADDR);
+     ^~~~~~~~~~~~~
+Z:\vm\test0423\openSSD_firmware\src/debug.h:107:29: warning: statement with no effect [-Wunused-value]
+ #define STATIC_ASSERT(cond) ((int)(sizeof(struct { int : (-!(cond)); })))
+                             ^
+../src/nmc/nmc_mapping.c:84:5: note: in expansion of macro 'STATIC_ASSERT'
+     STATIC_ASSERT(RESERVED1_START_ADDR <= NMC_START_ADDR);
+     ^~~~~~~~~~~~~
+Z:\vm\test0423\openSSD_firmware\src/debug.h:107:29: warning: statement with no effect [-Wunused-value]
+ #define STATIC_ASSERT(cond) ((int)(sizeof(struct { int : (-!(cond)); })))
+                             ^
+../src/nmc/nmc_mapping.c:85:5: note: in expansion of macro 'STATIC_ASSERT'
+     STATIC_ASSERT(NMC_END_ADDR <= RESERVED1_END_ADDR);
+     ^~~~~~~~~~~~~
+At top level:
+../src/nmc/nmc_mapping.c:633:13: warning: 'nmcMappingTableBlockCheck' defined but not used [-Wunused-function]
+ static void nmcMappingTableBlockCheck(uint8_t iCh){
+             ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/nmc/nmc_mapping.c:589:13: warning: 'nmcCheckBlockStatus' defined but not used [-Wunused-function]
+ static void nmcCheckBlockStatus(uint8_t iCh){
+             ^~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/nmc/nmc_mapping.c'
+' '
+'Building file: ../src/nmc/nmc_requests.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/nmc/nmc_requests.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nmc/nmc_requests.d" -MT"src/nmc/nmc_requests.o" -o "src/nmc/nmc_requests.o" "../src/nmc/nmc_requests.c"
+../src/nmc/nmc_requests.c: In function 'nmcRegisterNewMappingReqDone':
+../src/nmc/nmc_requests.c:56:22: warning: variable 'reqEntry' set but not used [-Wunused-but-set-variable]
+     P_SSD_REQ_FORMAT reqEntry;
+                      ^~~~~~~~
+../src/nmc/nmc_requests.c: In function 'nmcRegisterInferenceReq':
+../src/nmc/nmc_requests.c:92:22: warning: variable 'reqInference' set but not used [-Wunused-but-set-variable]
+     P_SSD_REQ_FORMAT reqInference;
+                      ^~~~~~~~~~~~
+../src/nmc/nmc_requests.c: In function 'nmcInferenceMain':
+../src/nmc/nmc_requests.c:199:38: warning: assignment to 'NMC_MAPPING_LOC *' {aka 'struct _NMC_MAPPING_LOC *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+             ch_mapping_table_address = MAPPING_TABLE_BASE_ADDRESS + 0x10 * i;
+                                      ^
+'Finished building: ../src/nmc/nmc_requests.c'
+' '
+'Building file: ../src/monitor/monitor.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/monitor/monitor.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/monitor/monitor.d" -MT"src/monitor/monitor.o" -o "src/monitor/monitor.o" "../src/monitor/monitor.c"
+In file included from ../src/monitor/monitor.c:1:
+../src/monitor/monitor.c: In function 'monitorInit':
+Z:\vm\test0423\openSSD_firmware\src/debug.h:107:29: warning: statement with no effect [-Wunused-value]
+ #define STATIC_ASSERT(cond) ((int)(sizeof(struct { int : (-!(cond)); })))
+                             ^
+../src/monitor/monitor.c:22:5: note: in expansion of macro 'STATIC_ASSERT'
+     STATIC_ASSERT(MONITOR_END_ADDR < COMPLETE_FLAG_TABLE_ADDR);
+     ^~~~~~~~~~~~~
+Z:\vm\test0423\openSSD_firmware\src/debug.h:107:29: warning: statement with no effect [-Wunused-value]
+ #define STATIC_ASSERT(cond) ((int)(sizeof(struct { int : (-!(cond)); })))
+                             ^
+../src/monitor/monitor.c:23:5: note: in expansion of macro 'STATIC_ASSERT'
+     STATIC_ASSERT(sizeof(MONITOR_SLICE_BUFFER) == BYTES_PER_SLICE);
+     ^~~~~~~~~~~~~
+Z:\vm\test0423\openSSD_firmware\src/debug.h:107:29: warning: statement with no effect [-Wunused-value]
+ #define STATIC_ASSERT(cond) ((int)(sizeof(struct { int : (-!(cond)); })))
+                             ^
+../src/monitor/monitor.c:24:5: note: in expansion of macro 'STATIC_ASSERT'
+     STATIC_ASSERT(sizeof(MONITOR_DATA_BUFFER) == (USER_DIES * BYTES_PER_SLICE));
+     ^~~~~~~~~~~~~
+'Finished building: ../src/monitor/monitor.c'
+' '
+'Building file: ../src/monitor/monitor_buffer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/monitor/monitor_buffer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/monitor/monitor_buffer.d" -MT"src/monitor/monitor_buffer.o" -o "src/monitor/monitor_buffer.o" "../src/monitor/monitor_buffer.c"
+'Finished building: ../src/monitor/monitor_buffer.c'
+' '
+'Building file: ../src/monitor/monitor_cmds.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/monitor/monitor_cmds.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/monitor/monitor_cmds.d" -MT"src/monitor/monitor_cmds.o" -o "src/monitor/monitor_cmds.o" "../src/monitor/monitor_cmds.c"
+../src/monitor/monitor_cmds.c: In function 'monitor_handle_admin_cmds':
+../src/monitor/monitor_cmds.c:83:13: warning: implicit declaration of function 'monitor_dump_file_table'; did you mean 'monitor_dump_phy_page'? [-Wimplicit-function-declaration]
+             monitor_dump_file_table();
+             ^~~~~~~~~~~~~~~~~~~~~~~
+             monitor_dump_phy_page
+'Finished building: ../src/monitor/monitor_cmds.c'
+' '
+'Building file: ../src/monitor/monitor_flash.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/monitor/monitor_flash.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/monitor/monitor_flash.d" -MT"src/monitor/monitor_flash.o" -o "src/monitor/monitor_flash.o" "../src/monitor/monitor_flash.c"
+'Finished building: ../src/monitor/monitor_flash.c'
+' '
+'Building file: ../src/monitor/monitor_map.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/monitor/monitor_map.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/monitor/monitor_map.d" -MT"src/monitor/monitor_map.o" -o "src/monitor/monitor_map.o" "../src/monitor/monitor_map.c"
+../src/monitor/monitor_map.c: In function 'monitor_dump_file_table':
+../src/monitor/monitor_map.c:124:5: warning: implicit declaration of function 'dumpFileTable'; did you mean 'dumpFileInfo'? [-Wimplicit-function-declaration]
+     dumpFileTable();
+     ^~~~~~~~~~~~~
+     dumpFileInfo
+'Finished building: ../src/monitor/monitor_map.c'
+' '
+'Building file: ../src/cdma/cdma.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/cdma/cdma.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/cdma/cdma.d" -MT"src/cdma/cdma.o" -o "src/cdma/cdma.o" "../src/cdma/cdma.c"
+../src/cdma/cdma.c: In function 'check_cdma_done':
+../src/cdma/cdma.c:31:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+         printf("AXAxiCdma_LookupConfig failed\n\r");
+         ^~~~~~
+../src/cdma/cdma.c:31:9: warning: incompatible implicit declaration of built-in function 'printf'
+../src/cdma/cdma.c:31:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/cdma/cdma.c:11:1:
++#include <stdio.h>
+ 
+../src/cdma/cdma.c:31:9:
+         printf("AXAxiCdma_LookupConfig failed\n\r");
+         ^~~~~~
+../src/cdma/cdma.c:28:9: warning: unused variable 'Status' [-Wunused-variable]
+     int Status;
+         ^~~~~~
+../src/cdma/cdma.c: In function 'cdma':
+../src/cdma/cdma.c:55:20: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+     int *Dinaddr = *DestAddr;
+                    ^
+../src/cdma/cdma.c:60:9: warning: incompatible implicit declaration of built-in function 'printf'
+         printf("--Set up the AXI CDMA from DDR to %x\t\n\r",&Boutaddr[0]);
+         ^~~~~~
+../src/cdma/cdma.c:60:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/cdma/cdma.c:60:52: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat=]
+         printf("--Set up the AXI CDMA from DDR to %x\t\n\r",&Boutaddr[0]);
+                                                   ~^        ~~~~~~~~~~~~
+                                                   %ls
+../src/cdma/cdma.c:98:13: warning: incompatible implicit declaration of built-in function 'printf'
+             printf("AXAxiCdma_LookupConfig failed\n\r");
+             ^~~~~~
+../src/cdma/cdma.c:98:13: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/cdma/cdma.c:109:9: warning: incompatible implicit declaration of built-in function 'printf'
+         printf("AXI CDMA is busy...\n\r");
+         ^~~~~~
+../src/cdma/cdma.c:109:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/cdma/cdma.c:53:10: warning: unused variable 'Binaddr' [-Wunused-variable]
+     int *Binaddr = (int *) BRAMADDR;
+          ^~~~~~~
+../src/cdma/cdma.c:47:10: warning: variable 'DestPtr' set but not used [-Wunused-but-set-variable]
+     int *DestPtr;
+          ^~~~~~~
+../src/cdma/cdma.c: In function 'cdma_write':
+../src/cdma/cdma.c:147:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("--Set up the AXI CDMA from DDR to %x\t\n\r",&Binaddr[0]);
+     ^~~~~~
+../src/cdma/cdma.c:147:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/cdma/cdma.c:147:48: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat=]
+     printf("--Set up the AXI CDMA from DDR to %x\t\n\r",&Binaddr[0]);
+                                               ~^        ~~~~~~~~~~~
+                                               %ls
+../src/cdma/cdma.c:177:40: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat=]
+     printf("--transaction from DDR to %x\t is done\n\r",&Binaddr[0]);
+                                       ~^                ~~~~~~~~~~~
+                                       %ls
+../src/cdma/cdma.c: In function 'cdma_read':
+../src/cdma/cdma.c:190:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("--Set up the AXI CDMA from %x\t to DDR\n\r",&Boutaddr[0]);
+     ^~~~~~
+../src/cdma/cdma.c:190:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/cdma/cdma.c:190:41: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat=]
+     printf("--Set up the AXI CDMA from %x\t to DDR\n\r",&Boutaddr[0]);
+                                        ~^               ~~~~~~~~~~~~
+                                        %ls
+../src/cdma/cdma.c:221:33: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat=]
+     printf("--transaction from %x\t to DDR is done\n\r",&Boutaddr[0]);
+                                ~^                       ~~~~~~~~~~~~
+                                %ls
+../src/cdma/cdma.c:222:5: warning: implicit declaration of function 'pr_info'; did you mean 'print'? [-Wimplicit-function-declaration]
+     pr_info("status : %d",Status);
+     ^~~~~~~
+     print
+../src/cdma/cdma.c: In function 'cdma_write':
+../src/cdma/cdma.c:184:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/cdma/cdma.c: In function 'cdma_read':
+../src/cdma/cdma.c:223:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/cdma/cdma.c'
+' '
+'Building file: ../src/address_translation.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/address_translation.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/address_translation.d" -MT"src/address_translation.o" -o "src/address_translation.o" "../src/address_translation.c"
+'Finished building: ../src/address_translation.c'
+' '
+'Building file: ../src/data_buffer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/data_buffer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/data_buffer.d" -MT"src/data_buffer.o" -o "src/data_buffer.o" "../src/data_buffer.c"
+In file included from ../src/data_buffer.c:50:
+../src/memory_map.h:162:26: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+ #define TEST_BUFFER_ADDR 0x2FFFE020
+                          ^~~~~~~~~~
+../src/data_buffer.c:53:22: note: in expansion of macro 'TEST_BUFFER_ADDR'
+ int *testBufferPtr = TEST_BUFFER_ADDR;
+                      ^~~~~~~~~~~~~~~~
+'Finished building: ../src/data_buffer.c'
+' '
+'Building file: ../src/ftl_config.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/ftl_config.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ftl_config.d" -MT"src/ftl_config.o" -o "src/ftl_config.o" "../src/ftl_config.c"
+../src/ftl_config.c: In function 'InitFTL':
+../src/ftl_config.c:76:5: warning: implicit declaration of function 'bufferinit' [-Wimplicit-function-declaration]
+     bufferinit();
+     ^~~~~~~~~~
+../src/ftl_config.c: In function 'InitNandArray':
+../src/ftl_config.c:233:40: warning: passing argument 3 of 'V2FReadIdSync' from incompatible pointer type [-Wincompatible-pointer-types]
+         V2FReadIdSync(&chCtlReg[i], 0, idData);
+                                        ^~~~~~
+In file included from ../src/ftl_config.h:50,
+                 from ../src/data_buffer.h:50,
+                 from ../src/memory_map.h:50,
+                 from ../src/ftl_config.c:52:
+../src/nsc_driver.h:449:59: note: expected 'unsigned int *' but argument is of type 'unsigned char *'
+ void V2FReadIdSync(T4REGS *t4regs, int way, unsigned int *statusReport);
+                                             ~~~~~~~~~~~~~~^~~~~~~~~~~~
+'Finished building: ../src/ftl_config.c'
+' '
+'Building file: ../src/garbage_collection.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/garbage_collection.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/garbage_collection.d" -MT"src/garbage_collection.o" -o "src/garbage_collection.o" "../src/garbage_collection.c"
+'Finished building: ../src/garbage_collection.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/request_allocation.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/request_allocation.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/request_allocation.d" -MT"src/request_allocation.o" -o "src/request_allocation.o" "../src/request_allocation.c"
+'Finished building: ../src/request_allocation.c'
+' '
+'Building file: ../src/request_schedule.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/request_schedule.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/request_schedule.d" -MT"src/request_schedule.o" -o "src/request_schedule.o" "../src/request_schedule.c"
+../src/request_schedule.c: In function 'CheckEccErrorInfo':
+../src/request_schedule.c:1326:30: warning: variable 'errorInfo1' set but not used [-Wunused-but-set-variable]
+     unsigned int errorInfo0, errorInfo1, reqSlotTag;
+                              ^~~~~~~~~~
+'Finished building: ../src/request_schedule.c'
+' '
+'Building file: ../src/request_transform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/request_transform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/request_transform.d" -MT"src/request_transform.o" -o "src/request_transform.o" "../src/request_transform.c"
+'Finished building: ../src/request_transform.c'
+' '
+'Building target: openSSD_firmware.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../openSSD_firmware_bsp/ps7_cortexa9_0/lib -o "openSSD_firmware.elf"  ./src/nvme/host_lld.o ./src/nvme/nvme_admin_cmd.o ./src/nvme/nvme_identify.o ./src/nvme/nvme_io_cmd.o ./src/nvme/nvme_main.o  ./src/nmc/address_translation_nmc.o ./src/nmc/nmc_file_table.o ./src/nmc/nmc_mapping.o ./src/nmc/nmc_requests.o  ./src/monitor/monitor.o ./src/monitor/monitor_buffer.o ./src/monitor/monitor_cmds.o ./src/monitor/monitor_flash.o ./src/monitor/monitor_map.o  ./src/input/input.o  ./src/cdma/cdma.o  ./src/address_translation.o ./src/data_buffer.o ./src/ftl_config.o ./src/garbage_collection.o ./src/main.o ./src/nsc_driver.o ./src/request_allocation.o ./src/request_schedule.o ./src/request_transform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/cdma/cdma.o: in function `cdma_read':
+Z:\vm\test0423\openSSD_firmware\Debug/../src/cdma/cdma.c:222: undefined reference to `pr_info'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: openSSD_firmware.elf] Error 1
+13:56:35 **** Auto Build of configuration Debug for project openSSD_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/ftl_config.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/ftl_config.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ftl_config.d" -MT"src/ftl_config.o" -o "src/ftl_config.o" "../src/ftl_config.c"
+../src/ftl_config.c: In function 'InitFTL':
+../src/ftl_config.c:76:5: warning: implicit declaration of function 'bufferinit' [-Wimplicit-function-declaration]
+     bufferinit();
+     ^~~~~~~~~~
+../src/ftl_config.c: In function 'InitNandArray':
+../src/ftl_config.c:233:40: warning: passing argument 3 of 'V2FReadIdSync' from incompatible pointer type [-Wincompatible-pointer-types]
+         V2FReadIdSync(&chCtlReg[i], 0, idData);
+                                        ^~~~~~
+In file included from ../src/ftl_config.h:50,
+                 from ../src/data_buffer.h:50,
+                 from ../src/memory_map.h:50,
+                 from ../src/ftl_config.c:52:
+../src/nsc_driver.h:449:59: note: expected 'unsigned int *' but argument is of type 'unsigned char *'
+ void V2FReadIdSync(T4REGS *t4regs, int way, unsigned int *statusReport);
+                                             ~~~~~~~~~~~~~~^~~~~~~~~~~~
+'Finished building: ../src/ftl_config.c'
+' '
+'Building target: openSSD_firmware.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../openSSD_firmware_bsp/ps7_cortexa9_0/lib -o "openSSD_firmware.elf"  ./src/nvme/host_lld.o ./src/nvme/nvme_admin_cmd.o ./src/nvme/nvme_identify.o ./src/nvme/nvme_io_cmd.o ./src/nvme/nvme_main.o  ./src/nmc/address_translation_nmc.o ./src/nmc/nmc_file_table.o ./src/nmc/nmc_mapping.o ./src/nmc/nmc_requests.o  ./src/monitor/monitor.o ./src/monitor/monitor_buffer.o ./src/monitor/monitor_cmds.o ./src/monitor/monitor_flash.o ./src/monitor/monitor_map.o  ./src/input/input.o  ./src/cdma/cdma.o  ./src/address_translation.o ./src/data_buffer.o ./src/ftl_config.o ./src/garbage_collection.o ./src/main.o ./src/nsc_driver.o ./src/request_allocation.o ./src/request_schedule.o ./src/request_transform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/cdma/cdma.o: in function `cdma_read':
+Z:\vm\test0423\openSSD_firmware\Debug/../src/cdma/cdma.c:222: undefined reference to `pr_info'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: openSSD_firmware.elf] Error 1
+13:58:03 **** Auto Build of configuration Debug for project openSSD_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/ftl_config.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/ftl_config.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ftl_config.d" -MT"src/ftl_config.o" -o "src/ftl_config.o" "../src/ftl_config.c"
+../src/ftl_config.c: In function 'InitFTL':
+../src/ftl_config.c:76:5: warning: implicit declaration of function 'bufferinit' [-Wimplicit-function-declaration]
+     bufferinit();
+     ^~~~~~~~~~
+../src/ftl_config.c: In function 'InitNandArray':
+../src/ftl_config.c:233:40: warning: passing argument 3 of 'V2FReadIdSync' from incompatible pointer type [-Wincompatible-pointer-types]
+         V2FReadIdSync(&chCtlReg[i], 0, idData);
+                                        ^~~~~~
+In file included from ../src/ftl_config.h:50,
+                 from ../src/data_buffer.h:50,
+                 from ../src/memory_map.h:50,
+                 from ../src/ftl_config.c:52:
+../src/nsc_driver.h:449:59: note: expected 'unsigned int *' but argument is of type 'unsigned char *'
+ void V2FReadIdSync(T4REGS *t4regs, int way, unsigned int *statusReport);
+                                             ~~~~~~~~~~~~~~^~~~~~~~~~~~
+'Finished building: ../src/ftl_config.c'
+' '
+'Building target: openSSD_firmware.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../openSSD_firmware_bsp/ps7_cortexa9_0/lib -o "openSSD_firmware.elf"  ./src/nvme/host_lld.o ./src/nvme/nvme_admin_cmd.o ./src/nvme/nvme_identify.o ./src/nvme/nvme_io_cmd.o ./src/nvme/nvme_main.o  ./src/nmc/address_translation_nmc.o ./src/nmc/nmc_file_table.o ./src/nmc/nmc_mapping.o ./src/nmc/nmc_requests.o  ./src/monitor/monitor.o ./src/monitor/monitor_buffer.o ./src/monitor/monitor_cmds.o ./src/monitor/monitor_flash.o ./src/monitor/monitor_map.o  ./src/input/input.o  ./src/cdma/cdma.o  ./src/address_translation.o ./src/data_buffer.o ./src/ftl_config.o ./src/garbage_collection.o ./src/main.o ./src/nsc_driver.o ./src/request_allocation.o ./src/request_schedule.o ./src/request_transform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/cdma/cdma.o: in function `cdma_read':
+Z:\vm\test0423\openSSD_firmware\Debug/../src/cdma/cdma.c:222: undefined reference to `pr_info'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: openSSD_firmware.elf] Error 1
+13:58:57 **** Auto Build of configuration Debug for project openSSD_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/cdma/cdma.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/cdma/cdma.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/cdma/cdma.d" -MT"src/cdma/cdma.o" -o "src/cdma/cdma.o" "../src/cdma/cdma.c"
+../src/cdma/cdma.c: In function 'check_cdma_done':
+../src/cdma/cdma.c:31:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+         printf("AXAxiCdma_LookupConfig failed\n\r");
+         ^~~~~~
+../src/cdma/cdma.c:31:9: warning: incompatible implicit declaration of built-in function 'printf'
+../src/cdma/cdma.c:31:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/cdma/cdma.c:11:1:
++#include <stdio.h>
+ 
+../src/cdma/cdma.c:31:9:
+         printf("AXAxiCdma_LookupConfig failed\n\r");
+         ^~~~~~
+../src/cdma/cdma.c:28:9: warning: unused variable 'Status' [-Wunused-variable]
+     int Status;
+         ^~~~~~
+../src/cdma/cdma.c: In function 'cdma':
+../src/cdma/cdma.c:55:20: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+     int *Dinaddr = *DestAddr;
+                    ^
+../src/cdma/cdma.c:60:9: warning: incompatible implicit declaration of built-in function 'printf'
+         printf("--Set up the AXI CDMA from DDR to %x\t\n\r",&Boutaddr[0]);
+         ^~~~~~
+../src/cdma/cdma.c:60:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/cdma/cdma.c:60:52: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat=]
+         printf("--Set up the AXI CDMA from DDR to %x\t\n\r",&Boutaddr[0]);
+                                                   ~^        ~~~~~~~~~~~~
+                                                   %ls
+../src/cdma/cdma.c:98:13: warning: incompatible implicit declaration of built-in function 'printf'
+             printf("AXAxiCdma_LookupConfig failed\n\r");
+             ^~~~~~
+../src/cdma/cdma.c:98:13: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/cdma/cdma.c:109:9: warning: incompatible implicit declaration of built-in function 'printf'
+         printf("AXI CDMA is busy...\n\r");
+         ^~~~~~
+../src/cdma/cdma.c:109:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/cdma/cdma.c:53:10: warning: unused variable 'Binaddr' [-Wunused-variable]
+     int *Binaddr = (int *) BRAMADDR;
+          ^~~~~~~
+../src/cdma/cdma.c:47:10: warning: variable 'DestPtr' set but not used [-Wunused-but-set-variable]
+     int *DestPtr;
+          ^~~~~~~
+../src/cdma/cdma.c: In function 'cdma_write':
+../src/cdma/cdma.c:147:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("--Set up the AXI CDMA from DDR to %x\t\n\r",&Binaddr[0]);
+     ^~~~~~
+../src/cdma/cdma.c:147:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/cdma/cdma.c:147:48: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat=]
+     printf("--Set up the AXI CDMA from DDR to %x\t\n\r",&Binaddr[0]);
+                                               ~^        ~~~~~~~~~~~
+                                               %ls
+../src/cdma/cdma.c:177:40: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat=]
+     printf("--transaction from DDR to %x\t is done\n\r",&Binaddr[0]);
+                                       ~^                ~~~~~~~~~~~
+                                       %ls
+../src/cdma/cdma.c: In function 'cdma_read':
+../src/cdma/cdma.c:190:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("--Set up the AXI CDMA from %x\t to DDR\n\r",&Boutaddr[0]);
+     ^~~~~~
+../src/cdma/cdma.c:190:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/cdma/cdma.c:190:41: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat=]
+     printf("--Set up the AXI CDMA from %x\t to DDR\n\r",&Boutaddr[0]);
+                                        ~^               ~~~~~~~~~~~~
+                                        %ls
+../src/cdma/cdma.c:221:33: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat=]
+     printf("--transaction from %x\t to DDR is done\n\r",&Boutaddr[0]);
+                                ~^                       ~~~~~~~~~~~~
+                                %ls
+../src/cdma/cdma.c: In function 'cdma_write':
+../src/cdma/cdma.c:184:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/cdma/cdma.c: In function 'cdma_read':
+../src/cdma/cdma.c:223:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/cdma/cdma.c'
+' '
+'Building target: openSSD_firmware.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../openSSD_firmware_bsp/ps7_cortexa9_0/lib -o "openSSD_firmware.elf"  ./src/nvme/host_lld.o ./src/nvme/nvme_admin_cmd.o ./src/nvme/nvme_identify.o ./src/nvme/nvme_io_cmd.o ./src/nvme/nvme_main.o  ./src/nmc/address_translation_nmc.o ./src/nmc/nmc_file_table.o ./src/nmc/nmc_mapping.o ./src/nmc/nmc_requests.o  ./src/monitor/monitor.o ./src/monitor/monitor_buffer.o ./src/monitor/monitor_cmds.o ./src/monitor/monitor_flash.o ./src/monitor/monitor_map.o  ./src/input/input.o  ./src/cdma/cdma.o  ./src/address_translation.o ./src/data_buffer.o ./src/ftl_config.o ./src/garbage_collection.o ./src/main.o ./src/nsc_driver.o ./src/request_allocation.o ./src/request_schedule.o ./src/request_transform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: openSSD_firmware.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size openSSD_firmware.elf  |tee "openSSD_firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 211148	   7248	  25712	 244108	  3b98c	openSSD_firmware.elf
+'Finished building: openSSD_firmware.elf.size'
+' '
+13:59:47 **** Incremental Build of configuration Debug for project openSSD_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:01:03 **** Auto Build of configuration Debug for project openSSD_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/ftl_config.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"Z:\vm\test0423\openSSD_firmware\src" -I"Z:\vm\test0423\openSSD_firmware\src\cdma" -I"Z:\vm\test0423\openSSD_firmware\src\nvme" -c -fmessage-length=0 -MT"src/ftl_config.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../openSSD_firmware_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ftl_config.d" -MT"src/ftl_config.o" -o "src/ftl_config.o" "../src/ftl_config.c"
+../src/ftl_config.c: In function 'InitFTL':
+../src/ftl_config.c:76:5: warning: implicit declaration of function 'bufferinit' [-Wimplicit-function-declaration]
+     bufferinit();
+     ^~~~~~~~~~
+../src/ftl_config.c: In function 'InitNandArray':
+../src/ftl_config.c:233:40: warning: passing argument 3 of 'V2FReadIdSync' from incompatible pointer type [-Wincompatible-pointer-types]
+         V2FReadIdSync(&chCtlReg[i], 0, idData);
+                                        ^~~~~~
+In file included from ../src/ftl_config.h:50,
+                 from ../src/data_buffer.h:50,
+                 from ../src/memory_map.h:50,
+                 from ../src/ftl_config.c:52:
+../src/nsc_driver.h:449:59: note: expected 'unsigned int *' but argument is of type 'unsigned char *'
+ void V2FReadIdSync(T4REGS *t4regs, int way, unsigned int *statusReport);
+                                             ~~~~~~~~~~~~~~^~~~~~~~~~~~
+'Finished building: ../src/ftl_config.c'
+' '
+'Building target: openSSD_firmware.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../openSSD_firmware_bsp/ps7_cortexa9_0/lib -o "openSSD_firmware.elf"  ./src/nvme/host_lld.o ./src/nvme/nvme_admin_cmd.o ./src/nvme/nvme_identify.o ./src/nvme/nvme_io_cmd.o ./src/nvme/nvme_main.o  ./src/nmc/address_translation_nmc.o ./src/nmc/nmc_file_table.o ./src/nmc/nmc_mapping.o ./src/nmc/nmc_requests.o  ./src/monitor/monitor.o ./src/monitor/monitor_buffer.o ./src/monitor/monitor_cmds.o ./src/monitor/monitor_flash.o ./src/monitor/monitor_map.o  ./src/input/input.o  ./src/cdma/cdma.o  ./src/address_translation.o ./src/data_buffer.o ./src/ftl_config.o ./src/garbage_collection.o ./src/main.o ./src/nsc_driver.o ./src/request_allocation.o ./src/request_schedule.o ./src/request_transform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: openSSD_firmware.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size openSSD_firmware.elf  |tee "openSSD_firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 211156	   7248	  25712	 244116	  3b994	openSSD_firmware.elf
+'Finished building: openSSD_firmware.elf.size'
+' '
+14:01:19 **** Incremental Build of configuration Debug for project openSSD_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:15:40 **** Auto Build of configuration Debug for project openSSD_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

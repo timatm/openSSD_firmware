@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "xil_printf.h": "c",
+        "debug.h": "c",
+        "xaxicdma.h": "c",
+        "nmc_requests.h": "c",
+        "xparameters.h": "c",
+        "assert.h": "c",
+        "nsc_driver.h": "c",
+        "nmc_file_table.h": "c",
+        "nmc_mapping.h": "c",
+        "708c3786bf2b001f1d01e13e98c8e182": "c"
+    }
+}
