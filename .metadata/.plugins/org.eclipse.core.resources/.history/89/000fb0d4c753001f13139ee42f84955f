@@ -892,7 +892,7 @@ void InitBlockDieMap()
 
     // After the system erases, the channel information must be rewritten.
     if (eraseFlag == 0){
-        recordChannelInfo();
+        RecordChannelInfo();
     }
     InitCurrentBlockOfDieMap();
 }
@@ -1344,8 +1344,8 @@ void UpdateBadBlockTableForGrownBadBlock(unsigned int tempBufAddr)
 }
 
 void recordChannelInfo(){
-    uint32_t iWay = 0,iPBlk = 0,iPage = 3;
-    pr_info("Record channel info start in each channel Way[%d] Blk[%d] Page[%d]",iWay,iPBlk,iPage);
+    pr_info("Record channel info start");
+    uint32_t iWay = 0,iPBlk = 0,iPage = 2;
     for ( uint32_t iCh = 0;iCh < USER_CHANNELS; iCh++){
         channelInfoBufferClear(iCh);
         channelInfo->ChInfo[iCh].ChNum = iCh;
@@ -1377,10 +1377,10 @@ void recordChannelInfo(){
     }
 }
 
-int checkChannelInfo()
+void checkChannelInfo()
 {
     pr_info("Check channel info start");
-    uint32_t iWay = 0,iPBlk = 0,iPage = 3;
+    uint32_t iWay = 0,iPBlk = 1,iPage = 10;
     for ( uint32_t iCh = 0;iCh < USER_CHANNELS ; iCh++){
         channelInfoBufferClear(iCh);
         uint32_t iReqEntry = GetFromFreeReqQ();
@@ -1405,15 +1405,15 @@ int checkChannelInfo()
         SyncAllLowLevelReqDone();
 
         if(channelInfo->ChInfo[iCh].ChNum != iCh){
-            return true;
+            pr_error("Channel does not match, please re-insert the nand flash module");
         }
+
     }
-    return false;
 }
 
 void channelInfoBufferClear(uint32_t iCh)
 {
-    pr_info("Clear channel info buffer CH[%d] ADDR:0x%x",iCh,channelInfo->ChInfo[iCh].byte);
+    pr_info("Clear channel info buffer CH[%d] ADDR:0x%x",iCh,channelInfo->ChInfo[iCh]);
     memset(channelInfo->ChInfo[iCh].byte,0,BYTES_PER_SLICE);
 }
 

@@ -89,11 +89,17 @@ void nvme_main()
 
     count = 0;
     InitFTL();
-   
     
-    xil_printf("\r\nFTL reset complete!!! \r\n");
-    xil_printf("Turn on the host PC \r\n");
-
+    if (checkChannelInfo())
+    {
+        pr_error("Channel does not match, please re-insert the nand flash module");
+    }
+    else{
+        xil_printf("\r\nFTL reset complete!!! \r\n");
+        xil_printf("Turn on the host PC \r\n");
+    }
+    
+    
     /**
      * The main loop of Cosmos+ firmware.
      *

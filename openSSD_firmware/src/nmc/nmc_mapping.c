@@ -364,7 +364,7 @@ void nmcRecoverMappingDir()
                             nmcNewMappingLoc[iCh] = cursor;
 
                             // the other pages should be all empty, so we can goto next channel
-                            pr_info("NMC: unused page found, stop scanning on Ch[%u]\n\n", iCh);
+                            pr_info("NMC: unused page found Ch[%u] Way[%u] Blk[%u] Page[%u], stop scanning on Ch[%u]\n\n",iCh,cursor.iWay,cursor.iDir,cursor.iPage ,iCh);
                         }
                         else
                         {
@@ -372,9 +372,11 @@ void nmcRecoverMappingDir()
                             nmcDumpMappingTable((void *)NMC_CH_MAP(iCh), false);
                         }
                     }
-                    else
+                    else{
                         pr_warn("CH[%d] WAY[%d] DIR[%d] PAGE[%d]",iCh,cursor.iWay,cursor.iDir,cursor.iPage);
                         pr_warn("Unexpected magic (%x)!", NMC_CH_MAP_POST_INFO(iCh)->magic);
+                    }
+                    pr_info("--------------------------------------------------------------------------------");  
                 }
             }
         }
@@ -467,7 +469,11 @@ static bool nmcFreePageCheck(const NMC_CH_MAPPING_TABLE *page)
     const uint8_t *ptr = (uint8_t *)page;
     for (uint32_t iByte = 0; iByte < BYTES_PER_DATA_REGION_OF_SLICE; ++iByte)
         if (ptr[iByte] != 0xFF)
+        {
+            pr_info("Page check in Byte[%u] is false",iByte);
             return false;
+        }
+        
     return true;
 }
 
@@ -729,7 +735,6 @@ void nmcDumpMappingTable(const void *addr, bool dumpBlks)
                 pr_warn("[%u] = W[%u].B[%u] Out-of-range !!", i, loc.wayNo, loc.blkNo);
         }
     }
-    pr_info("--------------------------------------------------------------------------------");
 }
 
 uintptr_t nmcReadMappingTable(uint8_t iCh, NMC_MAPPING_LOC loc)

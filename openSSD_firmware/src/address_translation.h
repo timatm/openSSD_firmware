@@ -324,6 +324,26 @@ typedef struct _PHY_BLOCK_MAP
     PHY_BLOCK_ENTRY phyBlock[USER_DIES][TOTAL_BLOCKS_PER_DIE];
 } PHY_BLOCK_MAP, *P_PHY_BLOCK_MAP;
 
+// Used to record channel related information
+typedef struct _CH_INFO_ENTRY
+{   union 
+    {
+        uint8_t byte[BYTES_PER_SLICE];
+        // Currently, the only record is the channel number
+        struct 
+        {
+            uint8_t ChNum;
+            uint8_t reserve[BYTES_PER_DATA_REGION_OF_SLICE - sizeof(uint8_t)];
+            uint8_t spare_area[BYTES_PER_SPARE_REGION_OF_SLICE];
+        };
+    };    
+} CH_INFO_ENTRY , * P_CH_INFO_ENTRY;
+
+typedef struct _CH_INFO
+{   
+    CH_INFO_ENTRY ChInfo[USER_CHANNELS];
+} CH_INFO , * P_CH_INFO;
+
 void InitAddressMap();
 void InitSliceMap();
 void InitBlockDieMap();
@@ -349,6 +369,11 @@ uint32_t SelectiveGetFromFbList(uint32_t dieNo, uint32_t targetBlk, uint32_t mod
 
 void UpdatePhyBlockMapForGrownBadBlock(unsigned int dieNo, unsigned int phyBlockNo);
 void UpdateBadBlockTableForGrownBadBlock(unsigned int tempBufAddr);
+
+void recordChannelInfo();
+int checkChannelInfo();
+void channelInfoBufferClear(uint32_t iCh);
+extern P_CH_INFO channelInfo;
 
 extern P_LOGICAL_SLICE_MAP logicalSliceMapPtr;
 extern P_VIRTUAL_SLICE_MAP virtualSliceMapPtr;

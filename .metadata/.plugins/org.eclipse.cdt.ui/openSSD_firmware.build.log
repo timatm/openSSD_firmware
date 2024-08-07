@@ -1,8 +1,8 @@
-13:15:40 **** Auto Build of configuration Debug for project openSSD_firmware ****
+16:56:05 **** Incremental Build of configuration Debug for project openSSD_firmware ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
 
-13:15:43 Build Finished (took 3s.4ms)
+16:56:07 Build Finished (took 1s.861ms)
 

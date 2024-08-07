@@ -85,7 +85,7 @@ int nmcFileTableUpdate(uint32_t iCh, NMC_MAPPING_LOC loc, const char *fname, NMC
     }
     pr_info("NMC: Ch[%u] Update file mapping location:", iCh);
     pr_info("\t filename: \"%s\"", fname);
-    pr_info("\t Way[%u].Dir[%u].Page[%u]", loc.iWay, loc.iDir, loc.iPage);
+    pr_info("\t Ch[%u] Way[%u].Dir[%u].Page[%u]", iCh,loc.iWay, loc.iDir, loc.iPage);
 
     // for existing entry, only update location
     NMC_FILE(iFile).type         = type;

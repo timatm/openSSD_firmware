@@ -1407,8 +1407,8 @@ int checkChannelInfo()
         if(channelInfo->ChInfo[iCh].ChNum != iCh){
             return true;
         }
+        return false;
     }
-    return false;
 }
 
 void channelInfoBufferClear(uint32_t iCh)
